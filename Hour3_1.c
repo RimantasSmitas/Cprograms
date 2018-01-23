@@ -8,7 +8,7 @@ printf("%d",results);
 }
 
 
-block(){
+int block(){
 int x = 0;
 int y = 0;
 x = 3;
