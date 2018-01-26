@@ -12,8 +12,8 @@ length = 0;
 while(measureThis[length]!=0){length++;}
 
 printf("The String is :%s\n",measureThis);
-printf("The lenth of a string\n%d characters\n",length);
-printf("The lenth of a string\n%d characters\n",strlen(measureThis));
+printf("The length of a string\n%d characters\n",length);
+printf("The length of a string\n%d characters\n",strlen(measureThis));
 
 
 }

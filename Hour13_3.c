@@ -16,7 +16,7 @@ if ((str[i] >= 'A') && (str[i] <= 'Z'))
 str[i] -= delt; /* convert to upper case */
 ++i;
 }
-printf("The entered string is (in uppercase):\n");
+printf("The entered string is (in lowercase):\n");
 puts( str );
 return 0;
 }

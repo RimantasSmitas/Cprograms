@@ -27,6 +27,6 @@ for (i=0; i<3; i++){
 for (j=0; j<2; j++)
 total = total + sizeof(list_ch[i][j]);
 }
-printf("total size of the array is equal to: %d\n ",total);
+printf("total size of the array is equal to: %d\n",total);
 printf("The array contains: %s\n",list_ch);
 }

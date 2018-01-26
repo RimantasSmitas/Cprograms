@@ -15,8 +15,8 @@ double list_data[6] = {1.12345,2.12345,3.12345,4.12345,5.12345};
 
 totalSize = sizeof(double)*6;
 
-printf("Total size is %d.\n ",totalSize);
-printf("Total size is %d.\n ",sizeof(list_data));
+printf("Total size is %d.\n",totalSize);
+printf("Total size is %d.\n",sizeof(list_data));
 
 }
 
