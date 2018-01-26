@@ -4,9 +4,9 @@
 
 #include<stdio.h>
 main (){
-double number, *ptr_n, number2;
+double number, *ptr_n;
 number = 123.45;
 ptr_n = &number;
 *ptr_n=543.21;
-printf("the number is %f.\n",number2);
+printf("the number is %f.\n",number);
 }
