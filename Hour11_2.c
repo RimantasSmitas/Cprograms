@@ -6,7 +6,6 @@
 main (){
 double number, *ptr_n, number2;
 number = 123.45;
-number2  = 543.21;
 ptr_n = &number;
 *ptr_n=543.21;
 printf("the number is %f.\n",number2);
