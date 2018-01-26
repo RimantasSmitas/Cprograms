@@ -4,11 +4,12 @@
 
 
 main (){
-char number;
-int  *ptr_n,number2;
+char number, *ptr_n;
+int  number2,*ptr_n2;
 number = 'A';
-number2  = 66;
-ptr_n = &number2;
-*ptr_n = number;
+number2 = 66;
+ptr_n = &number;
+ptr_n2 = &number2;
+*ptr_n=*ptr_n2;
 printf("the number is %d.\n",number);
 }
