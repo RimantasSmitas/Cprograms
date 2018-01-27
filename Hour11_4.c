@@ -11,6 +11,6 @@ ptr_y=&y;
 *ptr_x=(*ptr_x)*(*ptr_y);
 
 
-printf("The result of multipliyng is%d\n",(*ptr_x));
+printf("The result of multiplyng is: %d\n",(*ptr_x));
 
 }
