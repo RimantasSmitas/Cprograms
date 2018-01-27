@@ -55,25 +55,24 @@ digitalWrite (humidGreen, HIGH);
 }
 
 int tempDecid(int temp){
-if (temp>25)
+if (temp>35)
   {tempHigh();}
- else if (temp <20){
+ else if (35<temp>30){
 tempMedium();}
-  else if (temp <15){
+  else if (temp <25){
 tempLow(); }
-
+}
 
 int humidDecid(int humid)
 {
-if (humid>75)
+if (humid>60)
   {humidHigh();}
- else if (humid <50){
+ else if (60<humid <50){
 humidMedium();}
-  else if (humid <25){
+  else if (humid <44){
 humidLow();}
 
 }
-
 
 void read_dht11_dat()
 {
@@ -121,15 +120,15 @@ void read_dht11_dat()
 	     (dht11_dat[4] == ( (dht11_dat[0] + dht11_dat[1] + dht11_dat[2] + dht11_dat[3]) & 0xFF) ) )
 	{
 		f = dht11_dat[2] * 9. / 5. + 32;
-		tempDecid(dht11_dat[0]);
-		humidDecid(dh11_dat(2));
+		tempDecid(dht11_dat[2]);
+		humidDecid(dht11_dat[0]);
 		printf( "Humidity = %d.%d %% Temperature = %d.%d C (%.1f F)\n",
 			dht11_dat[0], dht11_dat[1], dht11_dat[2], dht11_dat[3], f );
 	}else  {
 		printf( "Data not good, skip\n" );
 	}
 }
-}
+
 
 
 
@@ -146,6 +145,8 @@ pinMode (tempGreen, OUTPUT);
 pinMode (humidRed, OUTPUT);
 pinMode (humidYellow, OUTPUT);
 pinMode (humidGreen, OUTPUT);
+//digital
+
 atexit (exitFunction);
 
         printf( "Raspberry Pi wiringPi DHT11 Temperature test program\n" );
@@ -160,25 +161,6 @@ atexit (exitFunction);
         }
 
         return(0);
-}
-
-/*
-for (;;)
-{
-digitalWrite (tempRed, HIGH) ; delay (500) ;
-digitalWrite (tempYellow, HIGH) ; delay (500) ;
-digitalWrite (tempGreen, HIGH) ; delay (500) ;
-digitalWrite (humidRed, HIGH) ; delay (500) ;
-digitalWrite (humidYellow, HIGH) ; delay (500) ;
-digitalWrite (humidGreen, HIGH) ; delay (500) ;
-digitalWrite (tempRed, LOW) ; delay (500) ;
-digitalWrite (tempYellow, LOW) ; delay (500) ;
-digitalWrite (tempGreen, LOW) ; delay (500) ;
-digitalWrite (humidRed, LOW) ; delay (500) ;
-digitalWrite (humidYellow, LOW) ; delay (500) ;
-digitalWrite (humidGreen, LOW) ; delay (500) ;
-}*/
-
 
 
 }
