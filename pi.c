@@ -37,11 +37,11 @@ int i;
 
 void setup() {
 
-  Serial.begin(9600);
+  int wiringPiSPISetup (int 1, int 50);
 
-  Serial.println("Debug MAX7219");
+  printf("Debug Max7219");
 
-  pinMode(SS_PIN, OUTPUT);  
+  pinMode(SS_PIN, OUTPUT);
 
   SPI.setBitOrder(MSBFIRST);   // Reverse the SPI Data o/p. 
   SPI.begin();                 // Start SPI
